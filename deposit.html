@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit | TITA BANK</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+```
+<h2>Deposit Virtual Money</h2>
+
+<p>Account: {{ user.account_number }}</p>
+
+<p>Current Balance:
+    <strong>MWK {{ "%.2f"|format(user.balance) }}</strong>
+</p>
+
+{% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endwith %}
+
+<form method="POST">
+
+    <label>Enter Deposit Amount (MWK)</label>
+
+    <input
+        type="number"
+        name="amount"
+        min="0.01"
+        max="1000000"
+        step="0.01"
+        placeholder="Enter amount"
+        required
+    >
+
+    <button type="submit">Deposit Money</button>
+
+</form>
+
+<p><a href="/dashboard">Back to Dashboard</a></p>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

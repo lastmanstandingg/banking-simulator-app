@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Bank Account</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Open Banking Account</h2>
+
+    <form method="POST">
+
+        <input type="text"
+               name="username"
+               placeholder="Full Name"
+               required>
+
+        <input type="password"
+               name="password"
+               placeholder="Create Password"
+               required>
+
+        <button type="submit">Create Account</button>
+
+    </form>
+
+    <p>Already registered?
+        <a href="/login">Login</a>
+    </p>
+
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

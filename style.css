@@ -1,0 +1,519 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #f3f6fb;
+color: #263445;
+line-height: 1.6;
+}
+
+/* HEADER */
+
+.bank-header {
+background: #123c69;
+color: white;
+padding: 18px 5%;
+box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.header-content {
+max-width: 1200px;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.logo span {
+font-size: 28px;
+}
+
+.logo h2 {
+letter-spacing: 1px;
+}
+
+.bank-nav {
+display: flex;
+align-items: center;
+gap: 22px;
+}
+
+.bank-nav a {
+color: white;
+text-decoration: none;
+font-size: 14px;
+transition: 0.3s;
+}
+
+.bank-nav a:hover,
+.bank-nav a.active {
+color: #ffc107;
+}
+
+.logout-btn {
+background: #dc3545;
+padding: 9px 17px;
+border-radius: 5px;
+}
+
+/* DASHBOARD WRAPPER */
+
+.dashboard-wrapper {
+max-width: 1100px;
+margin: 40px auto;
+padding: 0 25px;
+}
+
+/* WELCOME SECTION */
+
+.welcome-section {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+margin-bottom: 35px;
+}
+
+.welcome-section h1 {
+font-size: 27px;
+color: #123c69;
+}
+
+.welcome-section p {
+color: #77808d;
+}
+
+.date-box {
+background: white;
+padding: 12px 20px;
+border-radius: 8px;
+text-align: center;
+box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.date-box span {
+display: block;
+font-size: 12px;
+color: #888;
+}
+
+.date-box strong {
+font-size: 14px;
+}
+
+/* ACCOUNT BALANCE CARD */
+
+.account-section {
+display: flex;
+justify-content: center;
+margin-bottom: 45px;
+}
+
+.account-card {
+width: 100%;
+max-width: 650px;
+min-height: 270px;
+padding: 30px;
+border-radius: 18px;
+color: white;
+
+
+background: linear-gradient(
+    135deg,
+    #123c69,
+    #1769aa,
+    #0c2340
+);
+
+box-shadow: 0 12px 30px rgba(18,60,105,0.25);
+
+
+}
+
+.card-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.card-top p {
+font-size: 14px;
+opacity: 0.8;
+}
+
+.card-top h1 {
+font-size: 32px;
+margin-top: 8px;
+}
+
+.card-icon {
+font-size: 45px;
+}
+
+.card-bottom {
+display: flex;
+justify-content: space-between;
+gap: 15px;
+margin-top: 35px;
+}
+
+.card-bottom small {
+opacity: 0.7;
+font-size: 10px;
+letter-spacing: 1px;
+}
+
+.card-bottom h3 {
+font-size: 14px;
+margin-top: 5px;
+overflow-wrap: anywhere;
+}
+
+.card-footer {
+text-align: right;
+font-size: 10px;
+opacity: 0.7;
+margin-top: 25px;
+letter-spacing: 1px;
+}
+
+/* SERVICES */
+
+.services-section {
+margin-bottom: 45px;
+}
+
+.services-section h2,
+.information-section h2 {
+text-align: center;
+color: #123c69;
+font-size: 23px;
+}
+
+.section-description {
+text-align: center;
+color: #88909b;
+margin: 8px 0 28px;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
+
+.service-card {
+background: white;
+padding: 25px 18px;
+border-radius: 12px;
+text-decoration: none;
+color: #263445;
+text-align: center;
+min-height: 205px;
+
+box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+transition: 0.3s;
+
+}
+
+.service-card:hover {
+transform: translateY(-7px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.service-icon {
+width: 55px;
+height: 55px;
+margin: 0 auto 15px;
+border-radius: 50%;
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+font-size: 25px;
+
+
+}
+
+.deposit-icon {
+background: #e2f8eb;
+}
+
+.withdraw-icon {
+background: #fff0df;
+}
+
+.transfer-icon {
+background: #e6edff;
+}
+
+.history-icon {
+background: #f2e8ff;
+}
+
+.service-card h3 {
+font-size: 16px;
+margin-bottom: 8px;
+color: #123c69;
+}
+
+.service-card p {
+color: #858e99;
+font-size: 12px;
+min-height: 40px;
+}
+
+.service-card span {
+display: inline-block;
+margin-top: 12px;
+font-size: 12px;
+font-weight: bold;
+color: #1769aa;
+}
+
+/* ACCOUNT INFORMATION */
+
+.information-section {
+margin-bottom: 35px;
+}
+
+.information-card {
+background: white;
+padding: 25px 30px;
+border-radius: 12px;
+margin-top: 22px;
+
+
+box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+
+}
+
+.info-item {
+display: flex;
+justify-content: space-between;
+gap: 15px;
+padding: 15px 0;
+border-bottom: 1px solid #edf0f4;
+}
+
+.info-item:last-child {
+border-bottom: none;
+}
+
+.info-item span {
+color: #858e99;
+font-size: 14px;
+}
+
+.info-item strong {
+font-size: 14px;
+}
+
+.active-status {
+color: #198754;
+}
+
+/* SECURITY NOTICE */
+
+.security-notice {
+display: flex;
+align-items: center;
+gap: 18px;
+padding: 20px;
+background: #e7f2ff;
+border-left: 5px solid #1769aa;
+border-radius: 8px;
+margin-bottom: 40px;
+}
+
+.security-notice span {
+font-size: 30px;
+}
+
+.security-notice h3 {
+color: #123c69;
+font-size: 16px;
+}
+
+.security-notice p {
+font-size: 13px;
+color: #657487;
+}
+
+/* FOOTER */
+
+.bank-footer {
+background: #102c4d;
+color: white;
+text-align: center;
+padding: 30px 15px;
+}
+
+.bank-footer h3 {
+margin-bottom: 10px;
+letter-spacing: 2px;
+}
+
+.bank-footer p {
+font-size: 12px;
+opacity: 0.8;
+margin: 5px 0;
+}
+
+/* OTHER BANKING FORMS */
+
+.container {
+width: 100%;
+max-width: 420px;
+margin: 70px auto;
+padding: 30px;
+background: white;
+border-radius: 12px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.container h2 {
+text-align: center;
+color: #123c69;
+margin-bottom: 20px;
+}
+
+.container input {
+width: 100%;
+padding: 13px;
+margin: 10px 0;
+border: 1px solid #d5dce5;
+border-radius: 6px;
+}
+
+.container button {
+width: 100%;
+padding: 13px;
+background: #123c69;
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+}
+
+.container button:hover {
+background: #1769aa;
+}
+
+/* TABLES */
+
+table {
+width: 100%;
+border-collapse: collapse;
+background: white;
+margin-top: 20px;
+}
+
+th {
+background: #123c69;
+color: white;
+}
+
+th, td {
+padding: 12px;
+text-align: center;
+border: 1px solid #e0e5ec;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+
+.services-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header-content {
+    flex-direction: column;
+}
+
+.bank-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+
+.dashboard-wrapper {
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.welcome-section {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.welcome-section h1 {
+    font-size: 22px;
+}
+
+.services-grid {
+    grid-template-columns: 1fr;
+}
+
+.account-card {
+    padding: 22px;
+}
+
+.card-top h1 {
+    font-size: 24px;
+}
+
+.card-bottom {
+    flex-direction: column;
+    gap: 18px;
+}
+
+.info-item {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bank-nav {
+    gap: 12px;
+}
+
+.bank-nav a {
+    font-size: 12px;
+}
+
+.container {
+    width: 92%;
+    margin: 35px auto;
+}
+
+table {
+    font-size: 11px;
+}
+
+th, td {
+    padding: 7px;
+}
+
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>TITA BANK | Dashboard</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
+<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+
+</head>
+
+<body>
+
+<header class="bank-header">
+
+
+<div class="header-content">
+
+    <div class="logo">
+        <span>🏦</span>
+        <h2>TITA BANK</h2>
+    </div>
+
+    <nav class="bank-nav">
+        <a href="/dashboard" class="active">Dashboard</a>
+        <a href="/deposit">Deposit</a>
+        <a href="/withdraw">Withdraw</a>
+        <a href="/transfer">Transfer</a>
+        <a href="/transactions">Transactions</a>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </nav>
+
+</div>
+```
+
+</header>
+
+<main class="dashboard-wrapper">
+
+```
+<!-- Welcome Section -->
+
+<section class="welcome-section">
+
+    <div>
+        <h1>Welcome back, {{ user.username }}!</h1>
+        <p>Manage your banking activities from your dashboard.</p>
+    </div>
+
+    <div class="date-box">
+        <span>Today</span>
+        <strong id="digital-clock"></strong>
+    </div>
+
+</section>
+
+
+<!-- Account Balance -->
+
+<section class="account-section">
+
+    <div class="account-card">
+
+        <div class="card-top">
+
+            <div>
+                <p>Available Balance</p>
+
+                <h1>
+                    MWK {{ "%.2f"|format(user.balance) }}
+                </h1>
+            </div>
+
+            <span class="card-icon">💳</span>
+
+        </div>
+
+        <div class="card-bottom">
+
+            <div>
+                <small>ACCOUNT HOLDER</small>
+                <h3>{{ user.username }}</h3>
+            </div>
+
+            <div>
+                <small>ACCOUNT NUMBER</small>
+                <h3>{{ user.account_number }}</h3>
+            </div>
+
+        </div>
+
+        <div class="card-footer">
+            TITA BANK DIGITAL BANKING SIMULATOR
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Banking Services -->
+
+<section class="services-section">
+
+    <h2>Banking Services</h2>
+
+    <p class="section-description">
+        Select a service to continue.
+    </p>
+
+    <div class="services-grid">
+
+        <a href="/deposit" class="service-card">
+
+            <div class="service-icon deposit-icon">➕</div>
+
+            <h3>Deposit Money</h3>
+
+            <p>Add virtual money to your account.</p>
+
+            <span>Deposit Now →</span>
+
+        </a>
+
+
+        <a href="/withdraw" class="service-card">
+
+            <div class="service-icon withdraw-icon">💸</div>
+
+            <h3>Withdraw Money</h3>
+
+            <p>Withdraw virtual money from your account.</p>
+
+            <span>Withdraw Now →</span>
+
+        </a>
+
+
+        <a href="/transfer" class="service-card">
+
+            <div class="service-icon transfer-icon">🔄</div>
+
+            <h3>Transfer Money</h3>
+
+            <p>Send virtual money to another customer.</p>
+
+            <span>Transfer Now →</span>
+
+        </a>
+
+
+        <a href="/transactions" class="service-card">
+
+            <div class="service-icon history-icon">📊</div>
+
+            <h3>Transactions</h3>
+
+            <p>View your account transaction history.</p>
+
+            <span>View History →</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- Account Information -->
+
+<section class="information-section">
+
+    <h2>Account Information</h2>
+
+    <div class="information-card">
+
+        <div class="info-item">
+            <span>Customer Name</span>
+            <strong>{{ user.username }}</strong>
+        </div>
+
+        <div class="info-item">
+            <span>Account Number</span>
+            <strong>{{ user.account_number }}</strong>
+        </div>
+
+        <div class="info-item">
+            <span>Account Type</span>
+            <strong>Simulator Account</strong>
+        </div>
+
+        <div class="info-item">
+            <span>Account Status</span>
+            <strong class="active-status">● Active</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Security Notice -->
+
+<section class="security-notice">
+
+    <span>🔐</span>
+
+    <div>
+        <h3>Security Reminder</h3>
+
+        <p>
+            Keep your login credentials private.
+            Always log out when you finish using your account.
+        </p>
+    </div>
+
+</section>
+
+
+</main>
+
+<footer class="bank-footer">
+
+
+<h3>TITA BANK</h3>
+
+<p>
+    &copy; 2026 TITA BANK Banking Simulator.
+    Educational Project.
+</p>
+
+<p>Experience Digital Banking.</p>
+
+
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
